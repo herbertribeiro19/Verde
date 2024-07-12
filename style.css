@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Retirar rolagem da scrollbar */
+body::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(18,45,38);
+    background: linear-gradient(90deg, rgba(18,45,38,1) 0%, rgba(51,125,108,1) 49%, rgba(105,207,183,1) 100%);
+    flex-direction: column;
+}
+
+img{
+    width: 88px;
+    border-radius: 20px;
+}
+
+header{
+    margin-bottom: 2%;
+    height: 10vh;
+    width: 99%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 0px 30px 30px;
+    cursor: pointer;
+}
+
+iframe{
+    border-radius: 2px;
+}
+
+h1{
+    font-size: 30px;
+    color: rgb(18,45,38);
+    color: linear-gradient(90deg, rgba(18,45,38,1) 0%, rgba(51,125,108,1) 49%, rgba(105,207,183,1) 100%);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content h3{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.content h4{
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
