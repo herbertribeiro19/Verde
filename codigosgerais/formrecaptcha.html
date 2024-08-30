@@ -1,0 +1,112 @@
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+     function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+    </script>
+    
+    <!--FORM PART START-->
+    <div class="formpart">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00D1U000000zz6x" method="POST">
+        
+            <input type=hidden name='captcha_settings' value='{"keyname":"novoV2","fallback":"true","orgId":"00D1U000000zz6x","ts":""}'>
+            <input type=hidden name="orgid" value="00D1U000000zz6x">
+            
+            <input type=hidden name="retURL" value="http://verde.ag">
+            
+            <div class="form-row">
+                <input placeholder="Nome do contato" id="name" name="name" size="20" type="text" required="true"/><br>
+                
+                <input placeholder="Email" id="email" name="email" size="20" type="text" required="true"/><br>
+            </div>
+
+            <input placeholder="Telefone" id="phone" name="phone" size="20" type="number" required="true"/><br>
+            
+            <input placeholder="Assunto" id="subject" name="subject" size="20" type="text" required="true"/><br>
+            
+            <div class="description">
+                <label for="description">Descrição</label><textarea id="inputDescription" name="description" required="true"></textarea>
+            </div>
+
+            <!-- Recaptcha-->
+                <div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6Ld7WroUAAAAAEmIEhKQ3xIHjbxc2ICvxwDFOyo6"></div>
+                <div id="g-recaptcha-error"></div>
+             <!-- Recaptcha-->
+            
+            <input type="submit" name="submit">
+        
+        </form>
+    </div>
+    <!--FORM PART END-->
+    
+    <!--recaptcha-verification-->
+            <script>
+                function submitUserForm() {
+                    var response = grecaptcha.getResponse();
+                    if(response.length == 0) {
+                        document.getElementById('g-recaptcha-error').innerHTML = '<span style="margin: 10px; color:red; font-size: 16px; font-weight: 500; display: flex; justify-content: center;">Esse campo é requerido</span>';
+                        return false;
+                    }
+                    return true;
+                }
+                 
+                function verifyCaptcha() {
+                    document.getElementById('g-recaptcha-error').innerHTML = '';
+                }
+            </script>
+    <!--recaptcha-verification-->
+
+    <style>
+        .formpart {
+            background-color: rgb(230, 0, 0);
+            border-radius: 6%;
+            padding: 30;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        .form-row{
+            display: flex;
+            flex-direction: row;
+            gap: 10;
+            width: 100%;
+        }
+        #name{
+            padding: 14;
+            border-radius: 20;
+            margin-bottom: 5;
+            max-width: 80%;
+        }
+        #email{
+            padding: 14;
+            border-radius: 20;
+            margin-bottom: 5;
+            max-width: 80%;
+        }
+        #phone{
+            padding: 14;
+            border-radius: 20;
+            margin-bottom: 5;
+            max-width: 80%;
+        }
+        #subject{
+            padding: 14;
+            border-radius: 20;
+            margin-bottom: 5;
+            width: 100%;
+        }
+        .description{
+            display:flex;
+            flex-direction: column;
+        }
+        #inputDescription{
+            padding: 14;
+            border-radius: 20;
+            margin-bottom: 5;
+            max-width: 50%;
+        }
+        
+    </style>
+    

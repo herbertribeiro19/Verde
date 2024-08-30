@@ -1,0 +1,833 @@
+<header>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '423500003533175');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=423500003533175&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <script>
+      fbq('track', 'ViewContent');
+    </script>
+    </header>
+    
+    <!-- Start Code -->
+    
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+    " rel="stylesheet">
+    
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+    "></script>
+    
+    <div class="form-part">
+        <!--COMEÇA AQUI-->
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <div class="hidden-class" style="display: none;">
+                <input name="oid" type="hidden" value="00D1U000000zz6x" />
+                <input id="retURL" name="retURL" type="hidden" value="https://kforte.com.br/obrigado" />
+            </div>
+            <div class="form-box">
+                <div class="form-box-title">
+                    <h3>Converse com nosso Consultor Técnico</h3>
+                    <p>Fale agora com um consultor técnico e produza como jamais imaginou com os fertilizantes da Verde Agritech.</p>
+                </div>
+                <div class="form-box-content">
+                    <div class="form-row two-n">
+                        <div><input id="first_name" maxlength="40" name="first_name" required="true" size="20" type="text" placeholder="Primeiro Nome" /></div>
+                        <div><input id="last_name" maxlength="80" name="last_name" required="true" size="20" type="text" placeholder="Sobrenome" /></div>
+                    </div>
+                    
+                    <div class="form-row"><input id="email" maxlength="80" name="email" required="true" type="email" placeholder="E-mail" /></div>
+                    <div class="form-row"><input id="phone" maxlength="17" name="phone" pattern=".{16,17}" required="true" type="text" placeholder="Telefone com DDD (Apenas dígitos)" /></div>
+                    
+                    <!-- Tipo option start-->
+                    <div class="form-row">
+                        <select id="Tipo__c" title="Tipo" name="Tipo__c" required="true" onchange="toggleFields()">
+                            <option value="" disabled="" selected="" hidden="">Qual o seu perfil?</option>
+                            <option value="Cliente">Produtor rural</option>
+                            <option value="Consultor">Consultor</option>
+                            <option value="Canal de distribuição">Canal de distribuição</option>
+                            <option value="Representante">Representante</option>
+                            <option value="Estudantes">Estudante</option>
+                            <option value="Misturadora">Misturadora</option>
+                            <option value="Organomineral">Organomineral</option>
+                            <option value="Prestador de Serviços">Prestador de Serviços</option>
+                            <option value="Transportadora">Transportadora</option>
+                        </select>
+                    </div>
+                    <!--Tipo option end-->
+                    
+                    <!-- Área cultivada start-->
+                    <div class="form-row">
+                        <select id="00N1U00000VK1Jw" title="Tipo" name="00N1U00000VK1Jw" required="true">
+                            <option value="" disabled="" selected="" hidden="">Área cultivada aproximada (hectares)</option>
+                            <option value="0">Não possuo área</option>
+                            <option value="18">Área entre 1(ha) e 19(ha)</option>
+                            <option value="60">Área entre 20(ha) e 100(ha)</option>
+                            <option value="150">Área entre 101(ha) e 150(ha)</option>
+                            <option value="600">Área entre 151(ha) e 1000(ha)</option>
+                            <option value="2000">Área entre 1001(ha) e 3000(ha)</option>
+                            <option value="6000">Área entre 3001(ha) e 10000(ha)</option>
+                            <option value="10500">Área maior que 10000(ha)</option>
+                        </select>
+                    </div>
+                    <!--Área cultivada end-->
+                    
+                    <!-- START INCLUSAO CEP + CNPJ-->  
+                    <div class="part-conditional-fields" style="display: none;">
+                        <div class="form-row">
+                            <input placeholder="CEP (Apenas números)" id="zip" name="zip" type="text" maxlength="8" />
+                        </div>
+                        <div class="form-row">
+                            <input placeholder="CNPJ"  id="00N1U00000T6Y1y" maxlength="128" name="00N1U00000T6Y1y" size="20" type="text" /><br>
+                        </div>
+                    </div>
+                    <!-- END INCLUSAO CEP + CNPJ-->   
+                    
+                    <input type="hidden" name="00N4w00000HiyFC" id = '00N4w00000HiyFC' value="">
+                    <div class="hidden-class" style="display: none;">
+                        <div class="form-row"><input id="cep" type="hidden" value="" maxlength="9" pattern=".{9}" placeholder="CEP (Apenas números)" name="cep"/></div>
+                        <div class="form-row"><input id="company" maxlength="40" name="company" size="20" type="hidden" value="N/I" placeholder="Nome da Fazenda ou Empresa" /></div>
+                        <div class="form-row"><input id="00N1U00000T513U" name="00N1U00000T513U" required="false" type="hidden" value="Verificar" placeholder="Qual a principal cultura que você produz?" /></div>
+                        <input id="Tipo__c" name="Tipo__c" type="hidden" value="Cliente" />
+                        <input id="Cultura_Principal__c" name="Cultura_Principal__c" type="hidden" value="Verificar" />
+                        <input id="Lead_Created_From__c" name="Lead_Created_From__c" type="hidden" value="Formulário LP" />
+                        <input type="hidden" name="url" id="url" value="" />
+                        <input id="Analytics_Data__c" name="Analytics_Data__c" type="hidden" value="" />
+                        <input id="lead_source" name="lead_source" type="hidden" value="" />
+                        <input id="Anuncio_Criativo__c" name="Anuncio_Criativo__c" type="hidden" value="" />
+                        <input id="Anuncio_Conjunto__c" name="Anuncio_Conjunto__c" type="hidden" value="" />
+                        <input id="Anuncio_Campanha__c" name="Anuncio_Campanha__c" type="hidden" value="" />
+                        <input id="Campaign_Url__c" name="Campaign_Url__c" type="hidden" value="" />
+                        <input id="GA_Max_Scroll_Depth__c" name="GA_Max_Scroll_Depth__c" type="hidden" value="" />
+                        <input id="GA_Video_Played__c" name="GA_Video_Played__c" type="hidden" value="" />
+                        <input id="GA_Video_Links__c" name="GA_Video_Links__c" type="hidden" value="" />
+                        <input id="GA_Video_Time_Elapsed__c" name="GA_Video_Time_Elapsed__c" type="hidden" value="" />
+                        <input id="GA_User_Device__c" name="GA_User_Device__c" type="hidden" value="" />
+                        <input id="GA_Chatbot_Used__c" name="GA_Chatbot_Used__c" type="hidden" value="" />
+                        <input id="GA_Time_On_Landing_Page__c" name="GA_Time_On_Landing_Page__c" type="hidden" value="" />
+                        <input id="00N1U00000Vibnr" maxlength="100" name="00N1U00000Vibnr" size="20" type="hidden" value="Verificar" />
+                    </div>
+                    <div class="form-row check">
+                        <input id="00N1U00000VWewP" name="00N1U00000VWewP" type="checkbox" value="0" />
+                        <label>Eu aceito receber comunicações da Verde Agritech. A Verde Agritech utiliza dados fornecidos nesse formulário para comunicações via e-mail, telefone ou whatsapp. Você pode alterar suas preferências a qualquer momento. Para obter mais informações, confira nossa Política de Privacidade</label>
+                    </div>
+                    <div class="form-row blank">
+                        <input style="display:none;" type="submit" id="register-button" value="submit">
+                        <input style="background-color: #00594e; border-radius:50px; text-transform: none;" type="button" onclick="updateDatalayerAndRegister(true)" value="Falar com um Consultor Técnico">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!--FINALIZA AQUI-->
+    </div>
+    
+    <script>
+        function toggleFields() {
+            var tipo = document.getElementById('Tipo__c').value;
+            var conditionalFields = document.querySelector('.part-conditional-fields');
+    
+            if (tipo === 'Consultor' || tipo === 'Canal de distribuição' || tipo === 'Representante') {
+                conditionalFields.style.display = 'block';
+            } else {
+                conditionalFields.style.display = 'none';
+            }
+        }
+    </script>
+    
+        <div>
+           <!-- left align the badge widget -->
+    <style type="text/css">
+    @media only screen and (max-width: 400px) {
+    .calendly-badge-widget {
+    left: 10px !important;
+    margin-right: 200px!important;
+    bottom: 10px !important;
+    z-index: 999 !important;
+    }
+    .calendly-badge-content {
+    border-radius: 5px 5px 0px 0px !important;
+    padding: 0px 20px !important;
+    background-color: #0069ff !important;
+    border-width: 0px !important;
+    font-size: 0.7em !important;
+    text-transform: capitalize !important;
+    font-weight: normal !important;
+    }
+    }
+    @media only screen and (min-width: 401px) {
+    .calendly-badge-widget {
+    left: 10px !important;
+    margin-right: 200px!important;
+    bottom: 0px !important;
+    z-index: 999 !important;
+    }
+    .calendly-badge-content {
+    border-radius: 5px 5px 0px 0px !important;
+    padding: 0px 30px !important;
+    color: #ffffff !important;
+    background-color: #0069ff !important;
+    border-width: 0px !important;
+    font-size: 0.7em !important;
+    text-transform: capitalize !important;
+    font-weight: normal !important;
+    }
+    }
+            </style>
+            <!-- end left align the badge widget -->
+            <!-- Calendly badge widget begin -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async>
+            </script>
+           
+      
+            <script type="text/javascript">
+                    function updateDatalayerAndRegister(doRegister) {
+    //         if(doRegister === true){
+    // 				var nomever = document.getElementById('first_name');
+    // 				var ultimonomever = document.getElementById('last_name');
+    // 				var company = document.getElementById('company');
+    // 				var numero111 = document.getElementById('00N1U00000T513U');
+    // 				var numero222 = document.getElementById('00N1U00000VK1Jw');
+    // 				var emailvar = document.getElementById('email');
+    // 				var telefonezin = document.getElementById('phone');
+    // 				var cepzin = document.getElementById('cep');
+    // 				var tipo = document.getElementById('Tipo__c');
+    // 				if(nomever.value === '' || ultimonomever.value === '' || company.value === '' || numero111.value === 'Qual a principal cultura que você produz?' || numero222.value === '' || emailvar.value === '' || telefonezin.value === '' || cepzin.value === '' || tipo.value === ''){
+    // 					Swal.fire(
+    // 					  'Ainda não foi possivel enviar o seu formulário!',
+    // 					  'Verifique as informações que você digitou e tente novamente.',
+    // 					  'warning'
+    // 					)
+    // 					return false;
+    // 				}else{
+    // 					setTimeout(() => {
+    // 					}, 5000);
+    // 					Swal.fire(
+    // 					  'Formulário preenchido com sucesso!',
+    // 					  'Em breve um consultor técnico entrará em contato.',
+    // 					  'success'
+    // 					)
+    // 				}
+    // 		}
+            if(doRegister === true){
+                    var nomever = document.getElementById('first_name');
+                    var ultimonomever = document.getElementById('last_name');
+                    var company = document.getElementById('company');
+                    var numero111 = document.getElementById('00N1U00000T513U');
+                    var numero222 = document.getElementById('00N1U00000VK1Jw');
+                    var emailvar = document.getElementById('email');
+                    var telefonezin = document.getElementById('phone');
+                    // var cepzin = document.getElementById('cep');
+                    var tipo = document.getElementById('Tipo__c');
+                    if(nomever.value === '' || ultimonomever.value === '' || company.value === '' || numero111.value === 'Qual a principal cultura que você produz?' || numero222.value === '' || emailvar.value === '' || telefonezin.value === '' || tipo.value === ''){
+                        Swal.fire(
+                          'Ainda não foi possivel enviar o seu formulário!',
+                          'Verifique as informações que você digitou e tente novamente.',
+                          'warning'
+                        )
+                        return false;
+                    }else{
+                        setTimeout(() => {
+                        }, 5000);
+                        Swal.fire(
+                          'Formulário preenchido com sucesso!',
+                          'Em breve um consultor técnico entrará em contato.',
+                          'success'
+                        )
+                    }
+            }
+            
+            
+                            const checkbox = document.getElementById('00N1U00000VWewP');
+                            if (checkbox.checked) {
+                                    checkbox.value = "1";
+                            } else {
+                                    checkbox.value = "0";
+                            }
+                            const analyticsActivities = JSON.parse(JSON.stringify(window.dataLayer));
+                            const analyticsEvents = analyticsActivities.filter(t => Object.keys(t).includes("event"));
+        
+                            // Different Activities
+                            const clicks = analyticsEvents.filter(a => a.event === "gtm.click");
+                            const scrollDepths = analyticsEvents.filter(a => a.event === "gtm.scrollDepth");
+                            const videos = analyticsEvents.filter(a => a.event === "gtm.video");
+                            const timers = analyticsEvents.filter(a => a.event === "gtm.timer");
+        
+                            // Max scroll depth
+                            let maxScrolled = 0;
+                            if (scrollDepths.length > 0) {
+                                    maxScrolled = scrollDepths.sort(
+                                            function (a, b) {
+                                                    return parseInt(b['gtm.scrollThreshold']) - parseInt(a['gtm.scrollThreshold']);
+                                            }
+                                    )[0]['gtm.scrollThreshold'];
+                            }
+                            console.log("Max Scrolled: " + maxScrolled);
+                            document.getElementById("GA_Max_Scroll_Depth__c").value = maxScrolled;
+        
+                            // Video Played or Not
+                            console.log("Video Played: " + (videos.length > 0));
+                            document.getElementById("GA_Video_Played__c").value = (videos.length > 0);
+        
+                            if (videos.length > 0) {
+                                    const videoGroups = videos.reduce((acc, obj) => {
+                                            acc[obj['gtm.videoUrl']] = acc[obj['gtm.videoUrl']] || [];
+                                            acc[obj['gtm.videoUrl']].push(obj);
+                                            return acc;
+                                    }, {});
+        
+                                    // Video Urls
+                                    console.log("Video Urls: " + Object.keys(videoGroups).join(', '));
+                                    document.getElementById("GA_Video_Links__c").value = Object.keys(videoGroups).join('\n ');
+        
+        
+                                    let totalElapsed = 0;
+                                    for (var key in videoGroups) {
+                                            if (videoGroups.hasOwnProperty(key)) {
+                                                    let videoArray = videoGroups[key];
+                                                    const maxElapsed = videoArray.sort(
+                                                            function (a, b) {
+                                                                    return parseInt(b['gtm.uniqueEventId']) - parseInt(a['gtm.uniqueEventId']);
+                                                            }
+                                                    )[0]['gtm.videoElapsedTime'];
+                                                    //console.log("Video Elapsed: " + maxElapsed);
+                                                    totalElapsed += maxElapsed;
+                                            }
+                                    }
+                                    // Total time spent on Video
+                                    console.log("Total Video Elapsed: " + totalElapsed);
+                                    document.getElementById("GA_Video_Time_Elapsed__c").value = totalElapsed;
+                            }
+        
+                            // Storing user's device details
+                            const details = navigator.userAgent;
+        
+                            const regexp = /android|iphone|kindle|ipad/i;
+                            const isMobileDevice = regexp.test(details);
+                            console.log("Is Mobile Device: " + isMobileDevice);
+                            document.getElementById("GA_User_Device__c").value = isMobileDevice ? 'Mobile' : 'Web';
+        
+                            // Time spent on Page
+                            let totalTimeSpent = 0;
+                            if (timers.length > 0) {
+                                    maxTimeSpent = timers.sort(
+                                            function (a, b) {
+                                                    return parseInt(b['gtm.timerEventNumber']) - parseInt(a['gtm.timerEventNumber']);
+                                            }
+                                    )[0]['gtm.timerElapsedTime'];
+                                    totalTimeSpent = Math.round(maxTimeSpent / 1000);
+                            }
+                            console.log("Total Time on Landing Page: " + totalTimeSpent);
+                            document.getElementById("GA_Time_On_Landing_Page__c").value = totalTimeSpent;
+        
+                            //console.log("Analytics: " + JSON.stringify(analyticsEvents));
+                            //document.getElementById("Analytics_Data__c").value = JSON.stringify(analyticsEvents);
+        
+        
+                            // Campaign Mapping
+                            const origin = window.location.origin;
+                            const urlArray = window.location.href.split('?');
+                            let baseUrl = urlArray[0];
+                            if (baseUrl.slice(-1) === '/') {
+                                    baseUrl = baseUrl.slice(0, -1);
+                            }
+        
+                            // Lead Source
+                            const queryString = window.location.search;
+                            const urlParams = new URLSearchParams(queryString);
+                            let leadSource = 'Cadastro Site';
+                            let campaignUrl = baseUrl;
+                            if (urlParams.has('utm_source')) {
+                                    const utm_source = urlParams.get('utm_source');
+                                    if (utm_source === 'angg') {
+                                            leadSource = 'Anúncio Google';
+                                    } else if (utm_source === 'anfb') {
+                                            leadSource = 'Anúncio Facebook';
+                                    } else if (utm_source === 'blog') {
+                                            leadSource = 'Blog';
+                                    } else if (utm_source === 'email') {
+                                            leadSource = 'Fluxo Email';
+                                    } else if (utm_source === 'zap') {
+                                            leadSource = 'Fluxo Whatsapp';
+                                    } else if (utm_source === 'anex') {
+                                            leadSource = 'Mídia Externa';
+                                    } else if (utm_source === 'rsyt') {
+                                            leadSource = 'Youtube';
+                                    } else if (utm_source === 'rsitf') {
+                                            leadSource = 'Instagram Feed';
+                                    } else if (utm_source === 'rsitd') {
+                                            leadSource = 'Instagram Direct';
+                                    } else if (utm_source === 'rsfbf') {
+                                            leadSource = 'Facebook Feed';
+                                    } else if (utm_source === 'rsfbms') {
+                                            leadSource = 'Facebook Messenger';
+                                    } else if (utm_source === 'rslkd') {
+                                            leadSource = 'LinkedIn';
+                                    } else if (utm_source === 'sfmc') {
+                                            campaignUrl = 'Journey_Builder';
+                                    }
+                            }
+                            document.getElementById("lead_source").value = leadSource;
+                            document.getElementById("Campaign_Url__c").value = campaignUrl;
+        
+                            // Creative Ad(Anuncio_Criativo)
+                            if (urlParams.has('utm_content')) {
+                                    document.getElementById("Anuncio_Criativo__c").value = urlParams.get('utm_content')
+                            }
+        
+        
+                            // Joint Announcement(Anuncio Conjunto)
+                            if (urlParams.has('utm_adset_name')) {
+                                    document.getElementById("Anuncio_Conjunto__c").value = urlParams.get('utm_adset_name')
+                            }
+        
+                            // Campaign Announcement(Anuncio Campanha)
+                            if (urlParams.has('utm_campaign')) {
+                                    document.getElementById("Anuncio_Campanha__c").value = urlParams.get('utm_campaign')
+                            }
+    
+        
+        //Thank You Page with More fields
+        const emailtemp = document.getElementById('email').value;
+        document.getElementById("retURL").value = `https://conteudo.verde.ag/obrigado-cafe`
+        document.getElementById("url").value = window.location.href.split('?')[0];
+        
+        
+        
+                            // Update Cep removing '-'
+                            document.getElementById("00N4w00000HiyFC").value = document.getElementById("cep").value.replace(/-/g, '');
+        
+        
+        
+                            if (doRegister) {
+                                    document.getElementById("register-button").click();
+                                    gtag("event", "generate_lead", {
+                                            currency: "BRL",
+                                            value: 1.0,
+                                            href: baseUrl
+                                    });
+                            } else {
+                                    //const full_url = window.location.href;
+                                    //const chat_url = full_url.split('?')[0];
+                                    embedded_svc.settings.extraPrechatFormDetails = [
+                                            {
+                                                    "label": "Source URL",
+                                                    "value": campaignUrl,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["visitor_url__c"]
+                                            },
+                                            //------UTM for Webchat start--------------
+                                            {
+                                                   "label": "Lead Source",
+                                                    "value": leadSource,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields" : ["Lead_Source__c"]
+                                            },
+                                            //------UTM for Webchat end--------------
+                                            {
+                                                    "label": "GA Chatbot Used",
+                                                    "value": true,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_Chatbot_Used__c"]
+                                            },
+                                            {
+                                                    "label": "GA Max Scroll Depth",
+                                                    "value": document.getElementById("GA_Max_Scroll_Depth__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_Max_Scroll_Depth__c"]
+                                            },
+                                            {
+                                                    "label": "GA Time On Landing Page",
+                                                    "value": document.getElementById("GA_Time_On_Landing_Page__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_Time_On_Landing_Page__c"]
+                                            },
+                                            {
+                                                    "label": "GA User Device",
+                                                    "value": document.getElementById("GA_User_Device__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_User_Device__c"]
+                                            },
+                                            {
+                                                    "label": "GA Video Links",
+                                                    "value": document.getElementById("GA_Video_Links__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_Video_Links__c"]
+                                            },
+                                            {
+                                                    "label": "GA Video Played",
+                                                    "value": document.getElementById("GA_Video_Played__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_Video_Played__c"]
+                                            },
+                                            {
+                                                    "label": "GA Video Time Elapsed",
+                                                    "value": document.getElementById("GA_Video_Time_Elapsed__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["GA_Video_Time_Elapsed__c"]
+                                            },
+                                            {
+                                                    "label": "Anúncio Campanha",
+                                                    "value": document.getElementById("Anuncio_Campanha__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["Anuncio_Campanha__c"]
+                                            },
+                                            {
+                                                    "label": "Anúncio Conjunto",
+                                                    "value": document.getElementById("Anuncio_Conjunto__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["Anuncio_Conjunto__c"]
+                                            },
+                                            {
+                                                    "label": "Anúncio Criativo",
+                                                    "value": document.getElementById("Anuncio_Criativo__c").value,
+                                                    "displayToAgent": true,
+                                                    "transcriptFields": ["Anuncio_Criativo__c"]
+                                            }
+        
+                                    ];
+                            }
+                    }
+        
+                    // validate Phone number 10 or 11 digit with formatting
+                   const isNumericInput = (event) => {
+        const key = event.keyCode;
+        return ((key >= 48 && key <= 57) || // Allow number line
+        (key >= 96 && key <= 105) // Allow number pad
+        );
+        };
+        
+        const isModifierKey = (event) => {
+        const key = event.keyCode;
+        return (event.shiftKey === true || key === 35 || key === 36) || // Allow Shift, Home, End
+        (key === 8 || key === 9 || key === 13 || key === 46) || // Allow Backspace, Tab, Enter, Delete
+        (key > 36 && key < 41) || // Allow left, up, right, down
+        (
+                // Allow Ctrl/Command + A,C,V,X,Z
+                (event.ctrlKey === true || event.metaKey === true) &&
+                (key === 65 || key === 67 || key === 86 || key === 88 || key === 90)
+        )
+        };
+        
+        const enforceFormat = (event) => {
+        // Input must be of a valid number format or a modifier key, and not longer than 11 digits
+        if ((!isNumericInput(event) && !isModifierKey(event)) || event.shiftKey === true) {
+        event.preventDefault();
+        }
+        };
+        
+        //LIMITANDO O CAMPO DE CEP e CNPJ INICIO
+        
+        document.getElementById('zip').addEventListener('input', function (e) {
+        // Remove caracteres não numéricos
+        this.value = this.value.replace(/\D/g, '');
+    
+        // Limita o campo a 8 caracteres
+        if (this.value.length > 8) {
+          this.value = this.value.slice(0, 8);
+        }
+      });
+          
+        document.getElementById('00N1U00000T6Y1y').addEventListener('input', function (e) {
+        // Remove caracteres não numéricos
+        this.value = this.value.replace(/\D/g, '');
+    
+        // Limita o campo a 8 caracteres
+        if (this.value.length > 14) {
+          this.value = this.value.slice(0, 14);
+        }
+      });
+        //LIMITANDO O CAMPO DE CEP e CNPJ FIM
+        
+        
+        
+                    //the correct mask is (99) 99999-9999 or (99) 9999-9999 só the phone number need have min of 10 digts and max of 11 digts (witdh out the mask caractaers)
+                    const formatToPhone = (event) => {
+                            if (isModifierKey(event)) { return; }
+        
+                            const target = event.target;
+                            const input = event.target.value.replace(/\D/g, '').substring(0, 11);
+                            const zip = input.substring(0, 2);
+                            let middle = input.substring(2, 6);
+                            let last = input.substring(6, 11);
+                            if (input.length > 10) {
+                                    middle = input.substring(2, 7);
+                                    last = input.substring(7, 11);
+                            }
+        
+                            if (input.length > 6) { target.value = `(${zip}) ${middle} - ${last}`; }
+                            else if (input.length > 2) { target.value = `(${zip}) ${middle}`; }
+                            else if (input.length > 0) { target.value = `(${zip}`; }
+                    };
+        
+                    const formatZipCode = (event) => {
+                            const target = event.target;
+                            const t = target.value.replace(/-/g, '');
+                            const s = target.selectionStart;
+                            const b = t.substr(0, 5);
+                            const e = t.substr(5);
+                            if (e.length) {
+                                    target.value = [b, e].join('-');
+                                    if (s <= 5) target.setSelectionRange(s, s);
+                                    if (s == 6) target.setSelectionRange(s + 1, s + 1);
+                            } else target.value = b;
+                    };
+        
+                    function updateCulturaPrincipal() {
+                            const culture = event.currentTarget.value;
+                            document.getElementById("00N1U00000Vibnr").value = culture;
+                    }
+        
+        
+                    window.onload = function () {
+                            const inputElement = document.getElementById('phone');
+                            inputElement.addEventListener('keydown', enforceFormat);
+                            inputElement.addEventListener('keyup', formatToPhone);
+        
+                            const inputCep = document.getElementById('cep');
+                            inputCep.addEventListener('keydown', enforceFormat);
+                            inputCep.addEventListener('keyup', formatZipCode);
+                    };
+        
+                    function bookCalendlyAppointment() {
+                            const obj = this.embedded_svc.settings.extraPrechatFormDetails;
+                            let calendlyJson = {};
+                            obj.forEach((val) => calendlyJson[val.transcriptFields[0]] = val.value);
+                            const utmJson = {
+                                    A: false,
+                                    B: parseInt(calendlyJson.GA_Max_Scroll_Depth__c),
+                                    C: parseInt(calendlyJson.GA_Time_On_Landing_Page__c),
+                                    D: (calendlyJson.GA_Video_Played__c.toLowerCase() === 'true'),
+                                    E: parseInt(calendlyJson.GA_Video_Time_Elapsed__c),
+                                    F: calendlyJson.Anuncio_Campanha__c,
+                                    G: calendlyJson.Anuncio_Conjunto__c,
+                                    H: calendlyJson.Anuncio_Criativo__c
+                            };
+        
+                            Calendly.initPopupWidget({
+                                    url: 'https://calendly.com/verde_agritech/book_appointment?hide_landing_page_details=1&hide_gdpr_banner=1',
+                                    utm: {
+                                            utmCampaign: document.getElementById("Campaign_Url__c").value,
+                                            utmSource: document.getElementById('lead_source').value,
+                                            utmMedium: calendlyJson.GA_User_Device__c,
+                                            utmContent: calendlyJson.GA_Video_Links__c,
+                                            utmTerm: JSON.stringify(utmJson),
+                                    }
+                            });
+                            return false;
+                    }
+            </script>
+            <style type='text/css'>
+                   .embeddedServiceSidebar {
+                            font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif!important;
+                        }
+                    
+                        .embeddedServiceHelpButton .helpButton .uiButton {
+                            background: #333;
+                            font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,Arial,sans-serif!important;
+                            font-size: 14px;
+                            bottom: 0;
+                            border-radius: 0.375rem 0.375rem 0 0;
+                        }
+                    
+                        .embeddedServiceHelpButton .helpButton .uiButton:focus {
+                            outline: 1px solid #39a48b;
+                        }
+                    
+                        .embeddedServiceHelpButton .uiButton .helpButtonLabel .message {
+                            background-color: transparent;
+                            border: none;
+                            color: #fff;
+                            padding: 0;
+                            margin: 0;
+                            text-overflow: unset;
+                        }
+                    
+                        h2[embeddedService-chatHeader_chatHeader] {
+                            text-align: center;
+                            padding: 0;
+                            color: #fff;
+                        }
+                    
+                        .embeddedServiceSidebar button.sidebarHeader {
+                            background: #39a48b;
+                            border: none;
+                        }
+                    
+                        .embeddedServiceSidebar button.sidebarHeader:hover,
+                        .embeddedServiceSidebar button.sidebarHeader:focus {
+                            background: #39a48b;
+                            border: none;
+                            text-decoration: none;
+                        }
+    
+                        .embeddedServiceSidebar button.sidebarHeader .message {
+                            background-color: transparent;
+                            border: none;
+                            color: #fff;
+                        }
+                    
+                        .sidebarHeader button {
+                            height: 20px;
+                            min-height: 20px;
+                            width: 20px;
+                            min-width: 20px;
+                            cursor: pointer;
+                            position: relative;
+                        }
+                    
+                        .sidebarHeader button + button {
+                            margin-left: 5px;
+                        }
+                    
+                        .sidebarHeader button:hover:before {
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    
+                        .embeddedservice-chat-header[embeddedservice-chatheader_chatheader-host] {
+                            background-color: #39a48b;
+                        }
+            </style>
+    
+        <!--    <script>-->
+        
+        <!--            var initESW = function (gslbBaseURL) {-->
+        <!--                    var observer;-->
+                            <!--embedded_svc.settings.displayHelpButton = true;-->
+                            
+                          
+                            
+        <!--                    embedded_svc.settings.language = 'pt_BR';-->
+                            
+        <!--                    embedded_svc.settings.enabledFeatures = ['LiveAgent'];-->
+        <!--                    embedded_svc.settings.entryFeature = 'LiveAgent';-->
+        <!--                    embedded_svc.settings.disabledMinimizedText = "Agente on-line";-->
+        <!--                    embedded_svc.settings.prechatBackgroundImgURL = "https://verdeagritech--navsoft--c.visualforce.com/resource/1652857392000/SFAvatar";-->
+        
+        <!--                    embedded_svc.settings.smallCompanyLogoImgURL = "https://verde.ag/wp-content/uploads/2022/11/logo-branco.png";-->
+        <!--                    embedded_svc.settings.waitingStateBackgroundImgURL = "http://verde.ag/wp-content/uploads/2023/11/Sem-Titulo-1-1.png";-->
+        <!--                    embedded_svc.settings.avatarImgURL = "http://verde.ag/wp-content/uploads/2023/11/Avatar-woman.png"-->
+        <!--                    embedded_svc.settings.chatbotAvatarImgURL = "http://verde.ag/wp-content/uploads/2023/11/avatar122.png";-->
+        <!--                    embedded_svc.settings.defaultMinimizedText = 'Vamos conversar?';-->
+        <!--                    embedded_svc.settings.loadingText = 'Carregando';-->
+                            
+                           
+                            
+        <!--                    embedded_svc.addEventHandler("onHelpButtonClick", function (data) {-->
+        <!--                            console.log("onHelpButtonClick event was fired.");-->
+        <!--                            updateDatalayerAndRegister(false);-->
+        
+        <!--                    });-->
+        <!--                    embedded_svc.addEventHandler("onChasitorMessage", function (data) {-->
+        <!--                            console.log("onChasitorMessage event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);-->
+                                    <!-- Analytics Tracking Code (@Sunit)-->
+        <!--                            document.getElementById("GA_Chatbot_Used__c").value = true;-->
+        <!--End Of Analytics Tracking Code(@Sunit)-- >
+        <!--});-->
+        <!--                    embedded_svc.addEventHandler("onChatEndedByChasitor", function (data) {-->
+        <!--                            console.log("onChatEndedByChasitor event was fired.  liveAgentSessionKey was " + data.liveAgentSessionKey);-->
+        <!--                            console.log("onChatEndedByChasitor data" + data.data);-->
+        <!--                    });-->
+        <!--                    embedded_svc.addEventHandler("onAgentMessage", function (data) {-->
+        
+        <!--                            if (observer == null) {-->
+        <!--                                    observer = new MutationObserver(function (mutations_list) {-->
+        <!--                                            mutations_list.forEach(function (mutation) {-->
+        <!--                                                    mutation.addedNodes.forEach(function (added_node) {-->
+        <!--                                                            for (let i = 0; i < added_node.childNodes.length; i++) {-->
+        <!--                                                                    if (added_node.childNodes[i].className == "chatContent ") {-->
+        <!--                                                                            const chatContent = added_node.childNodes[i];-->
+        <!--                                                                            const plaintextContent = chatContent.firstChild;-->
+        <!--                                                                            if (plaintextContent != null) {-->
+        <!--                                                                                    const uiOutputRichText = plaintextContent.firstChild;-->
+        <!--                                                                                    if (uiOutputRichText != null) {-->
+        <!--                                                                                            const message = uiOutputRichText.textContent;-->
+        <!--                                                                                            console.log("#Message: " + message);-->
+                                                                                                    <!--//	'CALENDLY:{"team":"dev-navsoft","slug":"sabdo","name":"Xyz","email":"xyz.abc.in"}'-->
+        <!--                                                                                            if (message.startsWith('CALENDLY')) {-->
+        <!--                                                                                                    const linkData = message.replace('CALENDLY:', '');-->
+        <!--                                                                                                    const obj = JSON.parse(linkData);-->
+        <!--                                                                                                    const team = obj.team;-->
+        <!--                                                                                                    const slug = obj.slug;-->
+        <!--                                                                                                    const prefillName = obj.name;-->
+        <!--                                                                                                    const prefillEmail = obj.email;-->
+                                                                                                           
+        <!--                                                                                                    added_node.remove();-->
+        <!--                                                                                                    observer.disconnect();-->
+        <!--                                                                                                    Calendly.initPopupWidget({-->
+        <!--                                                                                                            url: 'https://calendly.com/' + slug,-->
+        <!--                                                                                                            prefill: {-->
+        <!--                                                                                                                    name: prefillName,-->
+        <!--                                                                                                                    email: prefillEmail-->
+        <!--                                                                                                            }-->
+        <!--                                                                                                    });-->
+        <!--                                                                                                    return false;-->
+        <!--                                                                                            }-->
+        <!--                                                                                    }-->
+        <!--                                                                            }-->
+        <!--                                                                            break;-->
+        <!--                                                                    }-->
+        <!--                                                            }-->
+        <!--                                                    });-->
+        <!--                                            });-->
+        <!--                                    });-->
+        <!--                                    observer.observe(document.querySelector(".messageWrapper"), { subtree: false, childList: true });-->
+        <!--                            }-->
+        <!--                    });-->
+        
+        <!--                    embedded_svc.init(-->
+        <!--                            'https://verdeagritech.my.salesforce.com',-->
+        <!--                            'https://verdeagritech.my.salesforce-sites.com/chatbot',-->
+        <!--                            gslbBaseURL,-->
+        <!--                            '00D1U000000zz6x',-->
+        <!--                            'Verde_Chat_Group_Embedded_Service',-->
+        <!--                            {-->
+        <!--                                    baseLiveAgentContentURL: 'https://c.la3-c1-ia4.salesforceliveagent.com/content',-->
+        <!--                                    deploymentId: '5724w0000000vX4',-->
+        <!--                                    buttonId: '5734w000000HhGS',-->
+        <!--                                    baseLiveAgentURL: 'https://d.la3-c1-ia4.salesforceliveagent.com/chat',-->
+        <!--                                    eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I4w000000TN2XEAW_1823ac6d4f3',-->
+        <!--                                    isOfflineSupportEnabled: false-->
+        <!--                            }-->
+        <!--                    );-->
+        <!--            };-->
+        
+        <!--            if (!window.embedded_svc) {-->
+        <!--                    var s = document.createElement('script');-->
+        <!--                    s.setAttribute('src', 'https://verdeagritech.my.salesforce.com/embeddedservice/5.0/esw.min.js');-->
+        <!--                    s.onload = function () {-->
+        <!--                            initESW(null);-->
+        <!--                    };-->
+        <!--                    document.body.appendChild(s);-->
+        <!--            } else {-->
+        <!--                    initESW('https://service.force.com');-->
+        <!--            }-->
+        
+        <!--    </script>-->
+    
+        </div>
+        
+    <!-- End Code -->
+        
+            <!--    <div class="calendly-badge-widget">-->
+            <!--        <input id="calendly-button" type="button" value="Agende um horário!&#x00A;Nós ligamos para você"-->
+            <!--                class="calendly-badge-content"-->
+            <!--                onclick="updateDatalayerAndRegister(false); bookCalendlyAppointment();" />-->
+            <!--</div>-->
