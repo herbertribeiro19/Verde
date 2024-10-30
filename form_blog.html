@@ -1,0 +1,773 @@
+<style>
+    /***Common for all section***/
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+    header {
+        width: 100%;
+    }
+
+    .container-wrap {
+        width: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .form-box-content input[type=submit] {
+        display: none;
+        width: 100%;
+        background-color: #39A48B !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 16px 4px 16px 4px;
+        margin-top: -10px;
+    }
+
+    .form-box-content input[type=button] {
+        width: 100%;
+        background-color: #39A48B !important;
+        font-size: 14px !important;
+        line-height: 24px !important;
+        font-weight: bold;
+        border-radius: 10px;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 16px 4px 16px 4px;
+        margin-top: -10px;
+    }
+
+    /*@media(max-width:1650px){
+.container-wrap{ padding: 0 20px; }	
+}*/
+    @media(max-width:1023px) {
+        .container-wrap {
+            padding: 0 20px;
+        }
+    }
+
+    .elementor-widget-wrap {
+        padding: 0 !important;
+    }
+
+    .form-part {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .form-box {
+        width: 100%;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+    }
+
+    .form-box-title {
+        padding: 14px !important;
+    }
+
+    .form-box-title h4 {
+        margin: 0px 0px 4px 0px;
+        font: bold 16px 'Source Sans Pro', sans-serif;
+        color: #303336;
+    }
+
+    .form-box-title p {
+        margin: 0;
+        padding: 0;
+        font: 400 13px/17px 'Source Sans Pro', sans-serif;
+        color: #4A5757;
+    }
+
+    .form-box-content {
+        padding: 10px !important;
+        line-height: 4px !important;
+    }
+
+    .form-box-content input[type="text"],
+    .form-box-content input[type="email"],
+    .form-box-content input[type="number"] {
+        background: #ffffff;
+        border: #D8D8D8 1px solid;
+        font: 400 14px 'Source Sans Pro', sans-serif;
+        color: #495757;
+        width: 100%;
+        max-width: unset;
+        padding: 10px 12px;
+        outline: none;
+        resize: none;
+        border-radius: 5px;
+    }
+
+    /*.form-box-content input[type="email"]{ background: #ffffff; border:#D8D8D8 1px solid; font:400 14px 'Source Sans Pro', sans-serif; color: #495757; width: 100%; padding: 10px 12px; outline: none; resize: none; border-radius: 5px;}*/
+    .form-box-content select {
+        background: #ffffff;
+        border-radius: 5px;
+        border: #D8D8D8 1px solid;
+        font: 400 14px 'Source Sans Pro', sans-serif;
+        color: #495757;
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        resize: none;
+    }
+
+    .form-row {
+        width: 100%;
+        margin: 0 0 15px 0;
+        border-radius: 5px;
+    }
+
+    .form-row.blank {
+        margin: 0;
+    }
+
+    .form-box-content input::-webkit-outer-spin-button,
+    .form-box-content input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .form-box-content input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .form-row.two-n {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .form-row.two-n div {
+        display: flex;
+        width: calc(50% - 8px);
+    }
+
+    .form-row.check {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .form-row.check label {
+        margin-left: 12px;
+        font: 400 12px/18px 'Source Sans Pro', sans-serif;
+        color: #495757;
+    }
+
+    .form-row.check label span {
+        color: #39A48B;
+        font-weight: 700;
+    }
+
+    .form-box-content input[type=submit]:hover {
+        background: #495757 ;
+    }
+
+    .form-box-content input[type=button]:hover {
+        background: #495757;
+    }
+
+    .img-sidebar{
+        border-radius: 20px !important;
+    }
+
+    @media(max-width:1023px) {
+        .header-part .container-wrap {
+            flex-direction: column;
+        }
+
+        .logo-part {
+            max-width: 100%;
+            margin-right: 0;
+        }
+
+        .form-part {
+            max-width: 100%;
+        }
+
+        .form-box {
+            margin-top: 0 !important;
+        }
+    }
+
+    /* Estilos responsivos para dispositivos móveis */
+    @media only screen and (max-width: 600px) {
+        .form-row two-n {
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .form-box-title h4 {
+            font-size: 14px;
+        }
+
+        .g-recaptcha {
+            transform: scale(0.6);  /* Reduz o tamanho do reCAPTCHA em dispositivos móveis */
+            transform-origin: 0 0;
+            margin-bottom: -30px;
+        }
+
+        .form-box-content input[type=submit] {
+            font-size: 10px !important;
+            margin-top: -10px;
+        }
+
+        .form-box-content input[type=button] {
+            font-size: 10px !important;
+            margin-top: -10px;
+        }
+    }
+
+    form input:focus:invalid,
+    form textarea:focus:invalid,
+    form select:focus:invalid {
+        border-color: #D8D8D8 !important;
+        color: #495757 !important;
+    }
+
+    .g-recaptcha {
+            transform: scale(0.6) !important;  /* Reduz o tamanho do reCAPTCHA em dispositivos móveis */
+            transform-origin: 0 0 !important;
+            margin-bottom: -30px !important;
+    }
+</style>
+<link href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.min.css
+" rel="stylesheet">
+
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.27/dist/sweetalert2.all.min.js
+"></script>
+
+ <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+ </script>
+ 
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
+
+<div class="form-part" id="form">
+    <div class="form-box">
+        <div class="form-box-title">
+            <h4>Deseja conhecer os fertilizantes da Verde Agritech?</h4>
+            <p>A Verde Agritech é uma Indústria brasileira de fertilizantes especiais com tecnologias exclusivas para revolucionar a agricultura de forma saudável, produtiva e rentável. Se quer saber como essas soluções de nutrição podem transformar o futuro da sua produção agrícola, preencha o formulário abaixo!</p>
+        </div>
+        <div class="form-box-content">
+            <form id="myForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                method="POST" onsubmit="return submitUserForm();">
+                <input type="hidden" name="oid" value="00D1U000000zz6x">
+                <!-- Dynamic redirection url (@Sunit)-->
+                <input type="hidden" name="retURL" id="retURL" value="https://blog.verde.ag/pt/obrigado/">
+                <!-- End of Dynamic redirection url (@Sunit)-->
+
+                <div class="form-row two-n">
+                    <div><input id="first_name" maxlength="40" placeholder="Primeiro Nome" name="first_name" size="20"
+                            type="text" required /></div>
+                    <div><input id="last_name" maxlength="80" name="last_name" placeholder="Sobrenome" size="20"
+                            type="text" required /></div>
+                </div>
+				
+				<div class="form-row"><input id="email" maxlength="80" name="email" required="true" type="email" placeholder="E-mail" /></div>
+                <div class="form-row"><input id="phone" maxlength="17" name="phone" pattern=".{16,17}" required="true" type="text" placeholder="Telefone com DDD (Apenas dígitos)" /></div>
+                    
+
+					<!-- Tipo option start-->
+                    <div class="form-row">
+                        <select id="Tipo__c" title="Tipo" name="Tipo__c" required="true">
+                            <option value="" disabled="" selected="" hidden="">Qual seu perfil profissional?</option>
+                            <option value="Cliente">Produtor rural</option>
+                            <option value="Consultor">Consultor</option>
+                            <option value="Canal de distribuição">Canal de distribuição</option>
+                            <option value="Agente Comercial">Agente Comercial</option>
+                            <option value="Estudantes">Estudante</option>
+                            <option value="Misturadora">Misturadora</option>
+                            <option value="Organomineral">Organomineral</option>
+                            <option value="Prestador de Serviços">Prestador de Serviços</option>
+                            <option value="Transportadora">Transportadora</option>
+                        </select>
+                    </div>
+                    <!--Tipo option end-->
+					
+					<!-- Tipo area start-->
+                    <div class="form-row">
+                        <select id="00N1U00000VK1Jw" title="Tipo" name="00N1U00000VK1Jw" required="true">
+                            <option value="" disabled="" selected="" hidden="">Área cultivada aproximada (hectares)</option>
+                            <option value="0">Não possuo área</option>
+                            <option value="18">Área entre 1(ha) e 19(ha)</option>
+                            <option value="60">Área entre 20(ha) e 100(ha)</option>
+                            <option value="150">Área entre 101(ha) e 150(ha)</option>
+                            <option value="600">Área entre 151(ha) e 1000(ha)</option>
+                            <option value="2000">Área entre 1001(ha) e 3000(ha)</option>
+                            <option value="6000">Área entre 3001(ha) e 10000(ha)</option>
+                            <option value="10500">Área maior que 10000(ha)</option>
+                        </select>
+                    </div>
+                    <!--Tipo area end-->
+
+
+                
+                <!-- <div class="form-row"><select id="00N1U00000T513U" title="Cultura" name="00N1U00000T513U" required="true" onchange="updateCulturaPrincipal()">-->
+                   <!--<option disabled="" selected="" hidden="">Qual a principal cultura que você produz?</option>-->
+                   <!-- <option value="Abacate">Abacate</option>-->
+                   <!-- <option value="Abacaxi">Abacaxi</option>-->
+                   <!-- <option value="Abóbora">Abóbora</option>-->
+                   <!-- <option value="Algodão">Algodão</option>-->
+                   <!-- <option value="Alho">Alho</option>-->
+                   <!-- <option value="Amendoim">Amendoim</option>-->
+                   <!-- <option value="Arroz">Arroz</option>-->
+                   <!-- <option value="Aveia">Aveia</option>-->
+                   <!-- <option value="Azevém">Azevém</option>-->
+                   <!-- <option value="Banana">Banana</option>-->
+                   <!-- <option value="Batata">Batata</option>-->
+                   <!-- <option value="Blueberry">Blueberry</option>-->
+                   <!-- <option value="Braquiária">Braquiária</option>-->
+                   <!-- <option value="Cacau">Cacau</option>-->
+                   <!-- <option value="Café">Café</option>-->
+                   <!-- <option value="Café Especial">Café Especial</option>-->
+                   <!-- <option value="Cana-de-Açúcar">Cana-de-Açúcar</option>-->
+                   <!-- <option value="Cebola">Cebola</option>-->
+                   <!-- <option value="Cenoura">Cenoura</option>-->
+                   <!-- <option value="Citrus">Citrus</option>-->
+                   <!-- <option value="Cranberry">Cranberry</option>-->
+                   <!-- <option value="Erva-mate">Erva-mate</option>-->
+                   <!-- <option value="Eucalipto">Eucalipto</option>-->
+                   <!-- <option value="Feijão">Feijão</option>-->
+                   <!-- <option value="Feno">Feno</option>-->
+                   <!-- <option value="Figo">Figo</option>-->
+                   <!-- <option value="Fruticultura">Fruticultura</option>-->
+                   <!-- <option value="Girassol">Girassol</option>-->
+                   <!-- <option value="Goiaba">Goiaba</option>-->
+                   <!-- <option value="Grama">Grama</option>-->
+                   <!-- <option value="HF">HF</option>-->
+                   <!-- <option value="Hortaliças">Hortaliças</option>-->
+                   <!-- <option value="Laranja">Laranja</option>-->
+                   <!-- <option value="Lichia">Lichia</option>-->
+                   <!-- <option value="Limão">Limão</option>-->
+                   <!-- <option value="Maconha">Maconha</option>-->
+                   <!-- <option value="Madeira">Madeira</option>-->
+                   <!-- <option value="Mamão">Mamão</option>-->
+                   <!-- <option value="Mamona">Mamona</option>-->
+                   <!-- <option value="Mandioca">Mandioca</option>-->
+                   <!-- <option value="Manga">Manga</option>-->
+                   <!-- <option value="Melancia">Melancia</option>-->
+                   <!-- <option value="Milhete">Milhete</option>-->
+                   <!-- <option value="Milho">Milho</option>-->
+                   <!-- <option value="Mogno">Mogno</option>-->
+                   <!-- <option value="Morango">Morango</option>-->
+                   <!-- <option value="Noz Pecan">Noz Pecan</option>-->
+                   <!-- <option value="Oliveiras">Oliveiras</option>-->
+                   <!-- <option value="Pastagem">Pastagem</option>-->
+                   <!-- <option value="Raspberry">Raspberry</option>-->
+                   <!-- <option value="Seringueira">Seringueira</option>-->
+                   <!-- <option value="Soja">Soja</option>-->
+                   <!-- <option value="Sorgo">Sorgo</option>-->
+                   <!-- <option value="Tangerina">Tangerina</option>-->
+                   <!-- <option value="Tomate">Tomate</option>-->
+                   <!-- <option value="Trigo">Trigo</option>-->
+                   <!-- <option value="Uva">Uva</option>-->
+                   <!-- </select></div>-->
+				   
+				   <!--<div class="form-row"><input id="cep" maxlength="9" pattern=".{9}" placeholder="CEP (Apenas números)" name="cep" type="text" required/></div>-->
+                    
+                    <!--<div class="form-row"><input id="00N1U00000VK1Jw" name="00N1U00000VK1Jw" required="true" type="number" placeholder="Área Cultivada (hectares)"/></div>-->
+                    
+			
+			
+			
+			
+			<input type=hidden name="00N4w00000HiyFC" id = '00N4w00000HiyFC' value="">
+			
+			<div class="hidden-class" style="display: none;">
+			
+				<div class="form-row"><input id="cep" type="hidden" value="" maxlength="9" pattern=".{9}" placeholder="CEP (Apenas números)" name="cep"/>
+                </div>
+				<div class="form-row"><input id="company" maxlength="40" name="company" size="20" type="hidden" value="N/I" placeholder="Nome da Fazenda ou Empresa"  />
+                </div>
+				<div class="form-row"><input id="00N1U00000T513U" name="00N1U00000T513U" required="false" type="hidden" value="Verificar" placeholder="Qual a principal cultura que você produz?" />
+                </div>
+			
+				<!--<input id="Tipo__c" name="Tipo__c" type="hidden" value="Cliente" />-->
+			
+				<input type="hidden" name="Cultura_Principal__c" id="Cultura_Principal__c" value="">
+				
+				<!--<input name="principal" type="hidden" value="true" />-->
+				
+				<!--<input type=hidden name='captcha_settings' value='{"keyname":"CAPTCHA_FORMULARIO_INTEGRADO","fallback":"true","orgId":"00D1U000000zz6x","ts":""}'>
+				-->
+				<input type="hidden" name="Lead_Created_From__c" id="Lead_Created_From__c" value="Formulário Blog">
+                <input type="hidden" name="Blog_Url__c" id="Blog_Url__c" value="">
+				<input type="hidden" name="url" id="url" value="" />
+                <input type="hidden" name="Analytics_Data__c" id="Analytics_Data__c" value="">
+                <input type="hidden" name="lead_source" id="lead_source" value="">
+                <input type="hidden" name="Anuncio_Criativo__c" id="Anuncio_Criativo__c" value="">
+                <input type="hidden" name="Anuncio_Conjunto__c" id="Anuncio_Conjunto__c" value="">
+                <input type="hidden" name="Anuncio_Campanha__c" id="Anuncio_Campanha__c" value="">
+                <input id="Campaign_Url__c" name="Campaign_Url__c" type="hidden" value="">
+                <input id="GA_Max_Scroll_Depth__c" name="GA_Max_Scroll_Depth__c" type="hidden" value="">
+                <input id="GA_Video_Played__c" name="GA_Video_Played__c" type="hidden" value="">
+                <input id="GA_Video_Links__c" name="GA_Video_Links__c" type="hidden" value="">
+                <input id="GA_Video_Time_Elapsed__c" name="GA_Video_Time_Elapsed__c" type="hidden" value="">
+                <input id="GA_User_Device__c" name="GA_User_Device__c" type="hidden" value="">
+                <input id="GA_Chatbot_Used__c" name="GA_Chatbot_Used__c" type="hidden" value="">
+                <input id="GA_Time_On_Landing_Page__c" name="GA_Time_On_Landing_Page__c" type="hidden" value="">
+				<input id="00N1U00000Vibnr" maxlength="100" name="00N1U00000Vibnr" size="20" type="hidden" value="Verificar" />
+			</div>
+		
+                <div class="form-row check">
+                    <!-- Update Datalayer on Checkbox Check (@Sunit)-->
+                    <input type="checkbox" id="00N1U00000VWewP" name="00N1U00000VWewP" value="0"> <!-- Opt_In__c -->
+                    <!-- End Of Update Datalayer on Checkbox check (@Sunit)-->
+                    <label for="00N1U00000VWewP">Eu aceito receber comunicações da Verde.</label>
+                </div>
+
+<!-- Recaptcha-->
+				<div class="g-recaptcha" data-callback="verifyCaptcha" data-sitekey="6Ld7WroUAAAAAEmIEhKQ3xIHjbxc2ICvxwDFOyo6"></div>
+				<div id="g-recaptcha-error"></div>
+				
+                <!-- Register Submit Button (@Sunit)-->
+                <div class="form-row blank">
+                    <input type="submit" id="register-button" value="submit">
+                    <input type="button" class="form-box-content" onclick="updateDatalayerAndRegister(true)"
+                        id="test-alert" value="Quero produzir como jamais imaginei" style="background-color: #38a38c; margin-top:10px;">
+                </div>
+				<!-- End of Register Submit Button (@Sunit)-->
+				
+				
+            </form>
+        </div>
+		
+		<!--recaptcha-verification-->
+		<script>
+			function submitUserForm() {
+				var response = grecaptcha.getResponse();
+				if(response.length == 0) {
+					document.getElementById('g-recaptcha-error').innerHTML = '<span style="margin: 10px; color:red; font-size: 16px; font-weight: 500; display: flex; justify-content: center;">Esse campo é requerido</span>';
+					return false;
+				}
+				return true;
+			}
+			 
+			function verifyCaptcha() {
+				document.getElementById('g-recaptcha-error').innerHTML = '';
+			}
+		</script>
+
+        
+		
+		<!--<script type="text/javascript">
+            var response = grecaptcha.getResponse();
+
+				if(response.length == 0)
+				//reCaptcha not verified
+				document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+					return false;
+				else
+				//reCaptch verified
+					return true;
+        </script>-->
+		
+        <script type="text/javascript">
+
+        <script type="text/javascript">
+            function ShowForm() {
+                jQuery("section#rodape-mobile").css("z-index", 1000001);
+            }
+            jQuery("button.premium-modal-trigger-btn.premium-btn-sm").click(function () { ShowForm() });
+        </script>
+        <script type="text/javascript">
+
+            function myFunction() {
+                console.log('hhhh');
+                console.log('dfssf');
+
+
+                var culture = event.currentTarget.value;
+                document.getElementById("00N1U00000Vibnr").value = culture;
+            }
+        </script>
+        <script type="text/javascript">
+
+            function updateDatalayerAndRegister(doRegister) {
+
+                const checkbox = document.getElementById('00N1U00000VWewP');
+                if (checkbox.checked) {
+                    checkbox.value = "1";
+                } else {
+                    checkbox.value = "0";
+                }
+                const analyticsActivities = JSON.parse(JSON.stringify(window.dataLayer));
+                const analyticsEvents = analyticsActivities.filter(t => Object.keys(t).includes("event"));
+
+                // Different Activities
+                const clicks = analyticsEvents.filter(a => a.event === "gtm.click");
+                const scrollDepths = analyticsEvents.filter(a => a.event === "gtm.scrollDepth");
+                const videos = analyticsEvents.filter(a => a.event === "gtm.video");
+                const timers = analyticsEvents.filter(a => a.event === "gtm.timer");
+
+                // Max scroll depth
+                let maxScrolled = 0;
+                if (scrollDepths.length > 0) {
+                    maxScrolled = scrollDepths.sort(
+                        function (a, b) {
+                            return parseInt(b['gtm.scrollThreshold']) - parseInt(a['gtm.scrollThreshold']);
+                        }
+                    )[0]['gtm.scrollThreshold'];
+                }
+                console.log("Max Scrolled: " + maxScrolled);
+                document.getElementById("GA_Max_Scroll_Depth__c").value = maxScrolled;
+
+                // Video Played or Not
+                console.log("Video Played: " + (videos.length > 0));
+                document.getElementById("GA_Video_Played__c").value = (videos.length > 0);
+
+                if (videos.length > 0) {
+                    const videoGroups = videos.reduce((acc, obj) => {
+                        acc[obj['gtm.videoUrl']] = acc[obj['gtm.videoUrl']] || [];
+                        acc[obj['gtm.videoUrl']].push(obj);
+                        return acc;
+                    }, {});
+
+                    // Video Urls
+                    console.log("Video Urls: " + Object.keys(videoGroups).join(', '));
+                    document.getElementById("GA_Video_Links__c").value = Object.keys(videoGroups).join('\n ');
+
+
+                    let totalElapsed = 0;
+                    for (var key in videoGroups) {
+                        if (videoGroups.hasOwnProperty(key)) {
+                            let videoArray = videoGroups[key];
+                            const maxElapsed = videoArray.sort(
+                                function (a, b) {
+                                    return parseInt(b['gtm.uniqueEventId']) - parseInt(a['gtm.uniqueEventId']);
+                                }
+                            )[0]['gtm.videoElapsedTime'];
+                            //console.log("Video Elapsed: " + maxElapsed);
+                            totalElapsed += maxElapsed;
+                        }
+                    }
+                    // Total time spent on Video
+                    console.log("Total Video Elapsed: " + totalElapsed);
+                    document.getElementById("GA_Video_Time_Elapsed__c").value = totalElapsed;
+                }
+
+                // Storing user's device details
+                const details = navigator.userAgent;
+
+                const regexp = /android|iphone|kindle|ipad/i;
+                const isMobileDevice = regexp.test(details);
+                console.log("Is Mobile Device: " + isMobileDevice);
+                document.getElementById("GA_User_Device__c").value = isMobileDevice ? 'Mobile' : 'Web';
+
+                // Time spent on Page
+                let totalTimeSpent = 0;
+                if (timers.length > 0) {
+                    maxTimeSpent = timers.sort(
+                        function (a, b) {
+                            return parseInt(b['gtm.timerEventNumber']) - parseInt(a['gtm.timerEventNumber']);
+                        }
+                    )[0]['gtm.timerElapsedTime'];
+                    totalTimeSpent = Math.round(maxTimeSpent / 1000);
+                }
+                console.log("Total Time on Landing Page: " + totalTimeSpent);
+                document.getElementById("GA_Time_On_Landing_Page__c").value = totalTimeSpent;
+
+                //console.log("Analytics: " + JSON.stringify(analyticsEvents));
+                //document.getElementById("Analytics_Data__c").value = JSON.stringify(analyticsEvents);
+
+                // Lead Source
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                let leadSource = 'Cadastro Blog';
+                if (urlParams.has('utm_source')) {
+                    const utm_source = urlParams.get('utm_source');
+                    if (utm_source === 'angg') {
+                        leadSource = 'Anúncio Google';
+                    } else if (utm_source === 'anfb') {
+                        leadSource = 'Anúncio Facebook';
+                    } else if (utm_source === 'blog') {
+                        //leadSource = 'Blog';
+                    } else if (utm_source === 'email') {
+                        leadSource = 'Fluxo Email';
+                    } else if (utm_source === 'zap') {
+                        leadSource = 'Fluxo Whatsapp';
+                    } else if (utm_source === 'anex') {
+                        leadSource = 'Mídia Externa';
+                    } 
+else if (utm_source === 'evnt') {
+                        leadSource = 'Evento';
+                    } 
+else if (utm_source === 'rsyt') {
+                        leadSource = 'Youtube';
+                    } else if (utm_source === 'rsitf') {
+                        leadSource = 'Instagram Feed';
+                    } else if (utm_source === 'rsitd') {
+                        leadSource = 'Instagram Direct';
+                    } else if (utm_source === 'rsfbf') {
+                        leadSource = 'Facebook Feed';
+                    } else if (utm_source === 'rsfbms') {
+                        leadSource = 'Facebook Messenger';
+                    } else if (utm_source === 'rslkd') {
+                        leadSource = 'LinkedIn';
+                    }
+                }
+                document.getElementById("lead_source").value = leadSource;
+
+                // Creative Ad(Anuncio_Criativo)
+                if (urlParams.has('utm_content')) {
+                    document.getElementById("Anuncio_Criativo__c").value = urlParams.get('utm_content')
+                }
+
+
+                // Joint Announcement(Anuncio Conjunto)
+                if (urlParams.has('utm_adset_name')) {
+                    document.getElementById("Anuncio_Conjunto__c").value = urlParams.get('utm_adset_name')
+                }
+
+                // Campaign Announcement(Anuncio Campanha)
+                if (urlParams.has('utm_campaign')) {
+                    document.getElementById("Anuncio_Campanha__c").value = urlParams.get('utm_campaign')
+                }
+
+                // Update Cep removing '-'
+                document.getElementById("00N4w00000HiyFC").value = document.getElementById("cep").value.replace(/-/g, '');
+
+                const formatZipCode = (event) => {
+                    const target = event.target;
+                    const t = target.value.replace(/-/g, '');
+                    const s = target.selectionStart;
+                    const b = t.substr(0, 5);
+                    const e = t.substr(5);
+                    if (e.length) {
+                        target.value = [b, e].join('-');
+                        if (s <= 5) target.setSelectionRange(s, s);
+                        if (s == 6) target.setSelectionRange(s + 1, s + 1);
+                    } else target.value = b;
+                };
+
+                window.onload = function () {
+                    const inputCep = document.getElementById('cep');
+                    inputCep.addEventListener('keydown', enforceFormat);
+                    inputCep.addEventListener('keyup', formatZipCode);
+                };
+
+                // Campaign Mapping
+                const origin = window.location.origin;
+                const urlArray = window.location.href.split('?');
+                let baseUrl = urlArray[0];
+                if (baseUrl.slice(-1) === '/') {
+                    baseUrl = baseUrl.slice(0, -1);
+                }
+
+                //console.log("Base Url: " + baseUrl);	
+                document.getElementById("Campaign_Url__c").value = baseUrl;
+                //document.getElementById("retURL").value = origin + '/pt/obrigado/';
+                document.getElementById("retURL").value = origin + '/pt/obrigado/';
+                document.getElementById("Blog_Url__c").value = window.location.href.split('?')[0];
+				document.getElementById("url").value = window.location.href.split('?')[0];
+				
+
+                if (doRegister) {
+                    document.getElementById("register-button").click();
+                    gtag("event", "generate_lead", {
+                        currency: "BRL",
+                        value: 1.0,
+                        href: baseUrl
+                    });
+                } else {
+                    const full_url = window.location.href;
+                    const chat_url = full_url.split('?')[0];
+                    embedded_svc.settings.extraPrechatFormDetails = [
+                        {
+                            "label": "Source URL",
+                            "value": chat_url,
+                            "displayToAgent": true,
+                            "transcriptFields": ["visitor_url__c"]
+                        },
+                        {
+                            "label": "GA Chatbot Used",
+                            "value": true,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_Chatbot_Used__c"]
+                        },
+                        {
+                            "label": "GA Max Scroll Depth",
+                            "value": document.getElementById("GA_Max_Scroll_Depth__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_Max_Scroll_Depth__c"]
+                        },
+                        {
+                            "label": "GA Time On Landing Page",
+                            "value": document.getElementById("GA_Time_On_Landing_Page__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_Time_On_Landing_Page__c"]
+                        },
+                        {
+                            "label": "GA User Device",
+                            "value": document.getElementById("GA_User_Device__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_User_Device__c"]
+                        },
+                        {
+                            "label": "GA Video Links",
+                            "value": document.getElementById("GA_Video_Links__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_Video_Links__c"]
+                        },
+                        {
+                            "label": "GA Video Played",
+                            "value": document.getElementById("GA_Video_Played__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_Video_Played__c"]
+                        },
+                        {
+                            "label": "GA Video Time Elapsed",
+                            "value": document.getElementById("GA_Video_Time_Elapsed__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["GA_Video_Time_Elapsed__c"]
+                        },
+                        {
+                            "label": "Anúncio Campanha",
+                            "value": document.getElementById("Anuncio_Campanha__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["Anuncio_Campanha__c"]
+                        },
+                        {
+                            "label": "Anúncio Conjunto",
+                            "value": document.getElementById("Anuncio_Conjunto__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["Anuncio_Conjunto__c"]
+                        },
+                        {
+                            "label": "Anúncio Criativo",
+                            "value": document.getElementById("Anuncio_Criativo__c").value,
+                            "displayToAgent": true,
+                            "transcriptFields": ["Anuncio_Criativo__c"]
+                        }
+
+                    ];
+                }
+            }
+
+
+
+            // Initialize iframe api for youtube video analytics
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        </script>
+    </div>
+</div>
